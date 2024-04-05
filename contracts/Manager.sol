@@ -3,14 +3,23 @@ pragma solidity ^0.8.13;
 
 contract Manager{
 
-    mapping (address => string) private userList;
+    struct User {
+        uint age;
+        string name;
+        string gender;
+    }
 
-    function register(string memory name, address user) public {
-        userList[user] = name;
+    mapping (address => User) private userList;
+
+    function register(uint age, string memory name, string memory gender, address user) public {
+        User storage _user = userList[user];
+        _user.age = age;
+        _user.name = name;
+        _user.gender = gender;
     } 
 
 
-    function consult (address user ) public view returns (string memory){
+    function consult (address user ) public view returns (User memory){
         return userList[user];
     }
 

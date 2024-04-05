@@ -4,7 +4,7 @@
  In "truffle console" I have used the following commands to test the code:
   1) admin = await Manager.deployed()
   
-  2) admin.register("Juan","0x94A9FB91Bd9Fc46E8026aaCae5a946c8483Fa2dc")
+  2) admin.register(23,"Juan","Male","0x94A9FB91Bd9Fc46E8026aaCae5a946c8483Fa2dc")
         *to register a user*
 
         *Now we will consult about said user with his address*
