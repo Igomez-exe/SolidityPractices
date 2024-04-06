@@ -11,19 +11,21 @@ contract Manager{
 
     mapping (address => User) private userList;
 
-    function register(uint age, string memory name, string memory gender, address user) public {
-        User storage _user = userList[user];
+    function register(uint age, string memory name, string memory gender) public {
+        //msg.sender -> person-blockchain
+        User storage _user = userList[msg.sender];
+
         _user.age = age;
         _user.name = name;
         _user.gender = gender;
     } 
 
 
-    function consult (address user ) public view returns (User memory){
-        return userList[user];
+    function consult () public view returns (User memory){
+        return userList[msg.sender];
     }
 
-    function _delete (address user )public{
-        delete userList[user];
+    function _delete ()public{
+        delete userList[msg.sender];
     }
 }
