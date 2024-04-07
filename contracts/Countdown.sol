@@ -19,11 +19,14 @@ contract Countdown{
     }
 
     function _restore () external {
-            startTime = block.timestamp;
+        startTime = block.timestamp;
     }
 
     function timeLeft()public view returns(uint256){
-        require(startTime<= block.timestamp, "Time not valid");
-
+        require(startTime <= block.timestamp, "Time not valid");
+        uint256 diff = block.timestamp - startTime;
+        uint256 remaining = diff >= gameDuration ? 0 : gameDuration - diff;
+        
+        return remaining;
     }
 }
