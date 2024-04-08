@@ -2,23 +2,23 @@
 ***All of them are found in the "contracts" folder.***
 
 ### Countdown
- a
+ In "truffle console" I have used the following commands to test the code:
 
+ 1) admin = await Countdown.deployed()
+ 2) admin.timeLeft()
+ 3) admin.setGameDuration(120) *to check how the seconds change*    
+ 4) admin.timeLeft()
+ 5) admin._restore()          *restores the int that we gave previously "120"*
+ 6) admin.getDuration()        *It will always give what we have set*
+      
 
 ### Manager
- Practicing more solidity but using Truffle and Ganache
-
  In "truffle console" I have used the following commands to test the code:
-  1) admin = await Manager.deployed()
-  
-  2) admin.register(23,"Juan","Male")
-        *to register a user*
 
-        *Now we will consult about said user with his address*
-  3) admin.consult()   
-
-        *and now we will delete it, sorry :(*
-  4) admin._delete()
+  1) admin2 = await Manager.deployed()
+  2) admin2.register(23,"Juan","Male") *to register a user*   
+  3) admin2.consult()         *Now we will consult about said user with his address*
+  4) admin2._delete()        *and now we will delete it, sorry :(*
 
 
 *-later I must try doing tests, in the corresponding folder*
