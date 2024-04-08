@@ -1,3 +1,7 @@
+***In this repository I will start uploading all my practices with Truffle and Ganache.***
+***All of them are found in the "contracts" folder.***
+
+
 # UserManager
  Practicing more solidity but using Truffle and Ganache
 
