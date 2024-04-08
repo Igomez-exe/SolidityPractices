@@ -1,8 +1,11 @@
 ***In this repository I will start uploading all my practices with Truffle and Ganache.***
 ***All of them are found in the "contracts" folder.***
 
+### Countdown
+ a
 
-### UserManager
+
+### Manager
  Practicing more solidity but using Truffle and Ganache
 
  In "truffle console" I have used the following commands to test the code:
@@ -18,4 +21,4 @@
   4) admin._delete()
 
 
--*later I must try doing tests, in the corresponding folder*
+*-later I must try doing tests, in the corresponding folder*
