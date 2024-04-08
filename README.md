@@ -2,7 +2,7 @@
 ***All of them are found in the "contracts" folder.***
 
 
-## UserManager
+### UserManager
  Practicing more solidity but using Truffle and Ganache
 
  In "truffle console" I have used the following commands to test the code:
