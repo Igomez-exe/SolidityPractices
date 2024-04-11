@@ -4,6 +4,7 @@
 ### CryptoDeposit
  To test this contract, I used "remix", since it wouldn't let me put a value in Wei. 
  For this I used the number "3000000000000000000" to deposit 3 ETH, and to place said crypto in byte10, use: "0x45544800000000000000"
+ And to purchase the "withdraw" function, I used the addresses provided by Remix.
 
 ### Countdown
  In "truffle console" I have used the following commands to test the code:
