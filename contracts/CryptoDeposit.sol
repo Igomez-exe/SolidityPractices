@@ -24,4 +24,14 @@ contract CryptoDeposit {
         return accounts[msg.sender][currency].balance;
     }
 
+    function withdraw(uint256 amount, bytes10 currency, address payable wallet) external{
+        Account storage account = accounts[msg.sender][currency];
+        require(account.balance >= amount, "Insufficient balance");
+
+        (bool success,) = wallet.call{value: amount}("");
+        require(success, "The withdrawal was not carried out");
+
+        account.balance -= amount;
+    }
+
 }
